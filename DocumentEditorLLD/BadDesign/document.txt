@@ -1,0 +1,4 @@
+Image Path 1
+Text 1
+Image Path 2
+Text 2
