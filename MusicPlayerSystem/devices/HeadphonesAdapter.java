@@ -1,7 +1,18 @@
 package devices;
 
-public class HeadphonesAdapter {
-    public void playSoundViaHeadphones(String data){
-        System.out.println("Playing music via Headphones : "+data );
+import externalDevices.HeadphonesAPI;
+import models.Song;
+
+public class HeadphonesAdapter implements IAudioOutputDevice{
+    HeadphonesAPI headphonesAPI;
+
+    public HeadphonesAdapter(HeadphonesAPI api){
+        this.headphonesAPI = api;
+    }
+
+    @Override
+    public void playAudio(Song song) {
+        String payload = song.getTitle() + " by " + song.getArtist();
+        headphonesAPI.playSoundViaHeadphones(payload);
     }
 }
