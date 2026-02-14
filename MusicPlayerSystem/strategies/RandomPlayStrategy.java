@@ -11,7 +11,6 @@ public class RandomPlayStrategy implements PlayStrategy{
         throw new UnsupportedOperationException("Unimplemented method 'setPlaylist'");
     }
 
-
     @Override
     public Song playNext() {
         // TODO Auto-generated method stub
@@ -19,9 +18,11 @@ public class RandomPlayStrategy implements PlayStrategy{
     }
 
     @Override
-    public Song PlayPrevious() {
+    public Song playPrevious() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'PlayPrevious'");
+        throw new UnsupportedOperationException("Unimplemented method 'playPrevious'");
     }
+
+    
     
 }

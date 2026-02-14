@@ -6,6 +6,6 @@ import models.Song;
 public interface PlayStrategy {
     void setPlaylist(Playlist playlist);
     Song playNext();
-    Song PlayPrevious();
+    Song playPrevious();
     default void addToQueue(Song song){}
 }

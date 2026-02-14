@@ -1,6 +1,5 @@
 package strategies;
 
-import javax.management.RuntimeErrorException;
 
 import models.Playlist;
 import models.Song;
@@ -9,7 +8,7 @@ public class SequentialPlayStrategy implements PlayStrategy{
 
     private Playlist playlist;
     private int currentSongIndex;
-    
+
     @Override
     public void setPlaylist(Playlist playlist) {
         this.playlist = playlist;
@@ -19,7 +18,7 @@ public class SequentialPlayStrategy implements PlayStrategy{
 
     @Override
     public Song playNext() {
-        if(currentSongIndex-1 < playlist.getSize()){
+        if(currentSongIndex+1 < playlist.getSize()){
             currentSongIndex++;
         }
         else{
@@ -31,7 +30,7 @@ public class SequentialPlayStrategy implements PlayStrategy{
 
 
     @Override
-    public Song PlayPrevious() {
+    public Song playPrevious() {
         if(currentSongIndex == 0){
             currentSongIndex = playlist.getSongs().size() - 1;
         }
